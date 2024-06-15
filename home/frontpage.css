@@ -1,0 +1,261 @@
+@font-face {
+  font-family: Bebas Neue;
+  src: url(../Fonts/BebasNeue-Regular.ttf);
+}
+.page1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #ff8c00d2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  z-index: 11;
+  background: transparent;
+  z-index: 11111;
+}
+
+.navname {
+  /* width: 6%; */
+  font-size: 3vw;
+  font-family: moranga;
+  line-height: 80%;
+}
+.navname p {
+  color: #1d1204;
+}
+.navlogo {
+  color: #000000;
+  font-size: 30px;
+  padding: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  text-align: center;
+  /* transform: scale(1.2) rotateY(180deg); */
+}
+.navlogo span {
+  color: black;
+}
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+  transform: scale(1.5);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+@media (max-width: 600px) {
+  .navname p {
+    font-size: 6vw;
+    line-height: 5vw;
+  }
+
+  .navlogo {
+    font-size: 20px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  .switch {
+    transform: scale(1);
+  }
+}
+.main {
+  font-family: Bebas Neue;
+  color: rgb(222, 43, 43);
+  text-align: center;
+  margin-top: 20vh;
+}
+.main h3 {
+  font-size: 10vw;
+  font-family: Bebas Neue, sans-serif;
+  color: black;
+}
+.main h2 {
+  font-size: 6vw;
+  font-family: Bebas Neue, sans-serif;
+  color: black;
+}
+.main h2 span {
+  color: rgb(0, 21, 255);
+  font-family: Bebas Neue, sans-serif;
+  color: black;
+}
+
+.main h1 {
+  font-size: 15vw;
+  font-family: Bebas Neue, sans-serif;
+  color: black;
+}
+.main div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main div p {
+  font-family: Bebas Neue, sans-serif;
+  color: black;
+}
+.main div p span {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(64, 255, 0);
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+@media (max-width: 600px) {
+  .main h3 {
+    font-size: 15vw;
+  }
+  .main h1 {
+    font-size: 30vw;
+    line-height: 30vw;
+  }
+  .main {
+    margin-top: 0vh;
+  }
+  .main h2 {
+    font-size: 9vw;
+  }
+  .main div {
+    flex-direction: column;
+  }
+}
+.scroller {
+  width: 35px;
+  height: 70px;
+  border: 4px solid rgb(98, 93, 101);
+  border-radius: 99px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 10%;
+  right: 1%;
+  margin: 2vh 3vw;
+  z-index: 11;
+  outline: 2px solid rgb(158, 154, 154);
+  outline-offset: 2px;
+}
+.scroller div {
+  width: 90%;
+  background-color: rgb(0, 0, 0);
+  height: 40%;
+  border-radius: 99px;
+}
