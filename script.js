@@ -228,6 +228,21 @@ gsap.utils.toArray(".container").forEach((container) => {
   });
 });
 
+gsap.utils.toArray(".inner-introdiv2").forEach((div) => {
+  gsap.from(div, {
+    x: 300,
+    opacity: 0,
+    scale: 0,
+
+    scrollTrigger: {
+      trigger: div,
+      scroller: "body",
+      start: "top 100%",
+      end: "top 71%",
+    },
+  });
+});
+
 gsap.from(".page4 a img", {
   x: 30,
   repeat: -1,
